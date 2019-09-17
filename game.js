@@ -1,19 +1,16 @@
 var score = 0;
 
 postToPage(score);
-createButton('Higher', btnPress);
-createButton('Lower', btnPress2);
-changeTitle('Clicker Game');
+changeTitle('Dimmsdale Dimmadome');
 
-if (score > 100){
-  setInterval(btnPress2, 1000);
-}
-if (score < 100) {
-  setInterval(btnPress, 1000);
-}
+
+ 
+
+
 
 function btnPress() {
-  score++;
+  score = score + 1;
+  createButton('Doug Dimmadome, Owner of the Dimmsdale Dimmadome', btnPress2);
   postToPage(score);
 }
 function btnPress2(){
