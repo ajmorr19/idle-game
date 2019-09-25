@@ -1,19 +1,34 @@
-var welcome = new Title('Hewwo');
-var woodButton = new Button ('Chop Wood', increaseWood);
-var stoneButton = new Button ('Mine Stone', increaseStone);
-var coalButton = new Button ('Mine Coal', increaseCoal);
-var ironButton = new Button ('Mine Iron', increaseIron);
-var wood = 0;
-var woodCount = new Text(wood + ' Wood')
-var stone = 0;
-var stoneCount = new Text(stone + ' Stone')
-var coal = 0;
-var coalCount = new Text(coal + ' Coal')
-var iron = 0;
-var ironCount = new Text(iron + ' Iron')
+let welcome = new Title('Hewwo');
+let woodButton = new Button ('Chop Wood', increaseWood);
+let wood = 0;
+let woodCount = new Text(wood + ' Wood')
+hide.woodButton()
+let NewMineButton = new button ('Build a mine', buildMine)
+let mine = 0;
+let mineCount = new Text(mine + 'Mine(s)')
+NewMineButton.hide()
+let stoneButton = new Button ('Mine Stone', increaseStone);
+let stone = 0;
+let stoneCount = new Text(stone + ' Stone')
+hide.button()
+let coalButton = new Button ('Mine Coal', increaseCoal);
+let coal = 0;
+let coalCount = new Text(coal + ' Coal')
+hide.button()
+let ironButton = new Button ('Mine Iron', increaseIron);
+let iron = 0;
+let ironCount = new Text(iron + ' Iron')
+hide.button()
 
 
+if(wood > 25){
+show.NewMineButton()
+}
 
+function buildMine () {
+buildMine++
+mineCount.edit(Mine + 'Mines')
+}
 function increaseWood(){
   wood++;
   woodCount.edit(wood + ' Wood');
