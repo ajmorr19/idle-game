@@ -20,9 +20,10 @@ let iron = 0;
 let ironCount = new Text(iron + ' Iron')
 hide.button()
 
-
+function NewMine(){
 if(wood > 25){
-show.NewMineButton()
+show.NewMineButton(100)
+}
 }
 
 function buildMine () {
@@ -30,8 +31,10 @@ buildMine++
 mineCount.edit(Mine + 'Mines')
 }
 function increaseWood(){
+  NewMine
   wood++;
   woodCount.edit(wood + ' Wood');
+  
 }
 function increaseStone(){
   stone++;
